@@ -1,0 +1,553 @@
+{
+  "customers": {
+    "train": 31999,
+    "test": 32001
+  },
+  "arm_means_test": {
+    "No E-Mail": {
+      "visit": 0.10598,
+      "conversion": 0.0062,
+      "spend": 0.61428
+    },
+    "Mens E-Mail": {
+      "visit": 0.18115,
+      "conversion": 0.01108,
+      "spend": 1.15357
+    },
+    "Womens E-Mail": {
+      "visit": 0.15065,
+      "conversion": 0.00935,
+      "spend": 1.22671
+    }
+  },
+  "binary": {
+    "mens_vs_none/visit": {
+      "ate_test": 0.07517,
+      "learners": {
+        "random": {
+          "qini_area": 0.00091,
+          "low": -0.00166,
+          "high": 0.0037,
+          "uplift_top10": 0.09878,
+          "uplift_top30": 0.08044,
+          "uplift_top50": 0.07894
+        },
+        "response": {
+          "qini_area": 0.00319,
+          "low": 0.00059,
+          "high": 0.00586,
+          "uplift_top10": 0.12634,
+          "uplift_top30": 0.08872,
+          "uplift_top50": 0.0806
+        },
+        "s_learner": {
+          "qini_area": 0.00098,
+          "low": -0.00164,
+          "high": 0.00346,
+          "uplift_top10": 0.11188,
+          "uplift_top30": 0.07906,
+          "uplift_top50": 0.07494
+        },
+        "t_learner": {
+          "qini_area": 6e-05,
+          "low": -0.00284,
+          "high": 0.00268,
+          "uplift_top10": 0.09172,
+          "uplift_top30": 0.07285,
+          "uplift_top50": 0.07698
+        },
+        "x_learner": {
+          "qini_area": -0.0001,
+          "low": -0.00284,
+          "high": 0.0026,
+          "uplift_top10": 0.09851,
+          "uplift_top30": 0.06839,
+          "uplift_top50": 0.07337
+        },
+        "dr_learner": {
+          "qini_area": 0.00063,
+          "low": -0.00211,
+          "high": 0.00338,
+          "uplift_top10": 0.08633,
+          "uplift_top30": 0.07499,
+          "uplift_top50": 0.07612
+        },
+        "transformed_outcome": {
+          "qini_area": -4e-05,
+          "low": -0.00278,
+          "high": 0.00278,
+          "uplift_top10": 0.08356,
+          "uplift_top30": 0.06663,
+          "uplift_top50": 0.07552
+        }
+      },
+      "cv_qini_train": {
+        "response": 0.00098,
+        "s_learner": 0.00012,
+        "t_learner": -0.00241,
+        "x_learner": -0.00263,
+        "dr_learner": -0.00415,
+        "transformed_outcome": -0.00407
+      },
+      "selected": "s_learner",
+      "paired": {
+        "s_learner - random": {
+          "diff": 7e-05,
+          "low": -0.00352,
+          "high": 0.00396
+        },
+        "s_learner - response": {
+          "diff": -0.00221,
+          "low": -0.00426,
+          "high": 1e-05
+        },
+        "response - random": {
+          "diff": 0.00228,
+          "low": -0.00168,
+          "high": 0.00595
+        }
+      },
+      "deciles_selected": [
+        {
+          "decile": 1,
+          "predicted": 0.1416,
+          "observed": 0.1119,
+          "n": 2131
+        },
+        {
+          "decile": 2,
+          "predicted": 0.1052,
+          "observed": 0.0531,
+          "n": 2131
+        },
+        {
+          "decile": 3,
+          "predicted": 0.0926,
+          "observed": 0.0706,
+          "n": 2131
+        },
+        {
+          "decile": 4,
+          "predicted": 0.084,
+          "observed": 0.072,
+          "n": 2131
+        },
+        {
+          "decile": 5,
+          "predicted": 0.0765,
+          "observed": 0.0673,
+          "n": 2131
+        },
+        {
+          "decile": 6,
+          "predicted": 0.0689,
+          "observed": 0.0723,
+          "n": 2131
+        },
+        {
+          "decile": 7,
+          "predicted": 0.0615,
+          "observed": 0.0957,
+          "n": 2131
+        },
+        {
+          "decile": 8,
+          "predicted": 0.0542,
+          "observed": 0.0662,
+          "n": 2130
+        },
+        {
+          "decile": 9,
+          "predicted": 0.0462,
+          "observed": 0.0664,
+          "n": 2130
+        },
+        {
+          "decile": 10,
+          "predicted": 0.0289,
+          "observed": 0.0779,
+          "n": 2130
+        }
+      ],
+      "budget_selected": {
+        "10%": {
+          "extra_per_1000_customers": 11.19,
+          "random_targeting": 7.52,
+          "share_of_full_effect": 0.149
+        },
+        "20%": {
+          "extra_per_1000_customers": 16.73,
+          "random_targeting": 15.03,
+          "share_of_full_effect": 0.223
+        },
+        "30%": {
+          "extra_per_1000_customers": 23.72,
+          "random_targeting": 22.55,
+          "share_of_full_effect": 0.316
+        },
+        "50%": {
+          "extra_per_1000_customers": 37.47,
+          "random_targeting": 37.59,
+          "share_of_full_effect": 0.498
+        },
+        "100%": {
+          "extra_per_1000_customers": 75.17,
+          "random_targeting": 75.17,
+          "share_of_full_effect": 1.0
+        }
+      }
+    },
+    "mens_vs_none/conversion": {
+      "ate_test": 0.00488,
+      "learners": {
+        "random": {
+          "qini_area": -6e-05,
+          "low": -0.00088,
+          "high": 0.00068,
+          "uplift_top10": 0.00381,
+          "uplift_top30": 0.00464,
+          "uplift_top50": 0.00465
+        },
+        "response": {
+          "qini_area": -2e-05,
+          "low": -0.00073,
+          "high": 0.00069,
+          "uplift_top10": 7e-05,
+          "uplift_top30": 0.00586,
+          "uplift_top50": 0.00449
+        },
+        "s_learner": {
+          "qini_area": -7e-05,
+          "low": -0.00083,
+          "high": 0.00069,
+          "uplift_top10": -2e-05,
+          "uplift_top30": 0.00389,
+          "uplift_top50": 0.00581
+        },
+        "t_learner": {
+          "qini_area": -6e-05,
+          "low": -0.00069,
+          "high": 0.00067,
+          "uplift_top10": 0.00123,
+          "uplift_top30": 0.00456,
+          "uplift_top50": 0.00442
+        },
+        "x_learner": {
+          "qini_area": -9e-05,
+          "low": -0.00079,
+          "high": 0.00067,
+          "uplift_top10": 0.00443,
+          "uplift_top30": 0.00424,
+          "uplift_top50": 0.00325
+        },
+        "dr_learner": {
+          "qini_area": -0.0,
+          "low": -0.00067,
+          "high": 0.00077,
+          "uplift_top10": 0.00253,
+          "uplift_top30": 0.00384,
+          "uplift_top50": 0.00591
+        },
+        "transformed_outcome": {
+          "qini_area": 0.00017,
+          "low": -0.00055,
+          "high": 0.00096,
+          "uplift_top10": 0.00738,
+          "uplift_top30": 0.00517,
+          "uplift_top50": 0.00497
+        }
+      },
+      "cv_qini_train": {
+        "response": 0.00071,
+        "s_learner": 0.00076,
+        "t_learner": 0.00046,
+        "x_learner": 0.0007,
+        "dr_learner": 0.00037,
+        "transformed_outcome": 0.00019
+      },
+      "selected": "s_learner",
+      "paired": {
+        "s_learner - random": {
+          "diff": -2e-05,
+          "low": -0.00103,
+          "high": 0.0012
+        },
+        "s_learner - response": {
+          "diff": -5e-05,
+          "low": -0.00048,
+          "high": 0.00038
+        },
+        "response - random": {
+          "diff": 3e-05,
+          "low": -0.00089,
+          "high": 0.00114
+        }
+      },
+      "deciles_selected": [
+        {
+          "decile": 1,
+          "predicted": 0.0363,
+          "observed": -0.0,
+          "n": 2131
+        },
+        {
+          "decile": 2,
+          "predicted": 0.0168,
+          "observed": 0.0061,
+          "n": 2131
+        },
+        {
+          "decile": 3,
+          "predicted": 0.011,
+          "observed": 0.0056,
+          "n": 2131
+        },
+        {
+          "decile": 4,
+          "predicted": 0.0078,
+          "observed": 0.0103,
+          "n": 2131
+        },
+        {
+          "decile": 5,
+          "predicted": 0.0055,
+          "observed": 0.0072,
+          "n": 2131
+        },
+        {
+          "decile": 6,
+          "predicted": 0.004,
+          "observed": -0.0016,
+          "n": 2131
+        },
+        {
+          "decile": 7,
+          "predicted": 0.0028,
+          "observed": 0.0096,
+          "n": 2131
+        },
+        {
+          "decile": 8,
+          "predicted": 0.0019,
+          "observed": 0.0008,
+          "n": 2130
+        },
+        {
+          "decile": 9,
+          "predicted": 0.0011,
+          "observed": 0.0032,
+          "n": 2130
+        },
+        {
+          "decile": 10,
+          "predicted": -0.0024,
+          "observed": 0.0072,
+          "n": 2130
+        }
+      ],
+      "budget_selected": {
+        "10%": {
+          "extra_per_1000_customers": -0.0,
+          "random_targeting": 0.49,
+          "share_of_full_effect": -0.0
+        },
+        "20%": {
+          "extra_per_1000_customers": 0.6,
+          "random_targeting": 0.98,
+          "share_of_full_effect": 0.123
+        },
+        "30%": {
+          "extra_per_1000_customers": 1.17,
+          "random_targeting": 1.46,
+          "share_of_full_effect": 0.239
+        },
+        "50%": {
+          "extra_per_1000_customers": 2.91,
+          "random_targeting": 2.44,
+          "share_of_full_effect": 0.596
+        },
+        "100%": {
+          "extra_per_1000_customers": 4.88,
+          "random_targeting": 4.88,
+          "share_of_full_effect": 1.0
+        }
+      }
+    },
+    "womens_vs_none/visit": {
+      "ate_test": 0.04467,
+      "learners": {
+        "random": {
+          "qini_area": -0.00099,
+          "low": -0.00338,
+          "high": 0.00127,
+          "uplift_top10": 0.03092,
+          "uplift_top30": 0.03713,
+          "uplift_top50": 0.03996
+        },
+        "response": {
+          "qini_area": 0.00435,
+          "low": 0.00194,
+          "high": 0.00699,
+          "uplift_top10": 0.06078,
+          "uplift_top30": 0.06163,
+          "uplift_top50": 0.05807
+        },
+        "s_learner": {
+          "qini_area": 0.00811,
+          "low": 0.0055,
+          "high": 0.0109,
+          "uplift_top10": 0.08747,
+          "uplift_top30": 0.08065,
+          "uplift_top50": 0.07562
+        },
+        "t_learner": {
+          "qini_area": 0.00663,
+          "low": 0.00383,
+          "high": 0.00937,
+          "uplift_top10": 0.0717,
+          "uplift_top30": 0.07607,
+          "uplift_top50": 0.06777
+        },
+        "x_learner": {
+          "qini_area": 0.00746,
+          "low": 0.00458,
+          "high": 0.0102,
+          "uplift_top10": 0.07513,
+          "uplift_top30": 0.07598,
+          "uplift_top50": 0.06834
+        },
+        "dr_learner": {
+          "qini_area": 0.00716,
+          "low": 0.00429,
+          "high": 0.0097,
+          "uplift_top10": 0.09036,
+          "uplift_top30": 0.07589,
+          "uplift_top50": 0.06824
+        },
+        "transformed_outcome": {
+          "qini_area": 0.00714,
+          "low": 0.00406,
+          "high": 0.00985,
+          "uplift_top10": 0.06165,
+          "uplift_top30": 0.07771,
+          "uplift_top50": 0.06721
+        }
+      },
+      "cv_qini_train": {
+        "response": 0.00114,
+        "s_learner": 0.00553,
+        "t_learner": -0.00067,
+        "x_learner": -0.00056,
+        "dr_learner": -0.00088,
+        "transformed_outcome": -0.00093
+      },
+      "selected": "s_learner",
+      "paired": {
+        "s_learner - random": {
+          "diff": 0.0091,
+          "low": 0.00562,
+          "high": 0.01263
+        },
+        "s_learner - response": {
+          "diff": 0.00376,
+          "low": 0.00133,
+          "high": 0.00605
+        },
+        "response - random": {
+          "diff": 0.00534,
+          "low": 0.00199,
+          "high": 0.00896
+        }
+      },
+      "deciles_selected": [
+        {
+          "decile": 1,
+          "predicted": 0.1081,
+          "observed": 0.0875,
+          "n": 2135
+        },
+        {
+          "decile": 2,
+          "predicted": 0.0866,
+          "observed": 0.0662,
+          "n": 2135
+        },
+        {
+          "decile": 3,
+          "predicted": 0.0738,
+          "observed": 0.0862,
+          "n": 2135
+        },
+        {
+          "decile": 4,
+          "predicted": 0.0627,
+          "observed": 0.0723,
+          "n": 2135
+        },
+        {
+          "decile": 5,
+          "predicted": 0.0508,
+          "observed": 0.0652,
+          "n": 2135
+        },
+        {
+          "decile": 6,
+          "predicted": 0.0338,
+          "observed": 0.0281,
+          "n": 2135
+        },
+        {
+          "decile": 7,
+          "predicted": 0.0225,
+          "observed": -0.0015,
+          "n": 2135
+        },
+        {
+          "decile": 8,
+          "predicted": 0.0152,
+          "observed": 0.0077,
+          "n": 2134
+        },
+        {
+          "decile": 9,
+          "predicted": 0.0078,
+          "observed": 0.0088,
+          "n": 2134
+        },
+        {
+          "decile": 10,
+          "predicted": -0.013,
+          "observed": 0.0239,
+          "n": 2134
+        }
+      ],
+      "budget_selected": {
+        "10%": {
+          "extra_per_1000_customers": 8.75,
+          "random_targeting": 4.47,
+          "share_of_full_effect": 0.196
+        },
+        "20%": {
+          "extra_per_1000_customers": 15.51,
+          "random_targeting": 8.93,
+          "share_of_full_effect": 0.347
+        },
+        "30%": {
+          "extra_per_1000_customers": 24.19,
+          "random_targeting": 13.4,
+          "share_of_full_effect": 0.542
+        },
+        "50%": {
+          "extra_per_1000_customers": 37.81,
+          "random_targeting": 22.33,
+          "share_of_full_effect": 0.847
+        },
+        "100%": {
+          "extra_per_1000_customers": 44.67,
+          "random_targeting": 44.67,
+          "share_of_full_effect": 1.0
+        }
+      }
+    }
+  }
+}
